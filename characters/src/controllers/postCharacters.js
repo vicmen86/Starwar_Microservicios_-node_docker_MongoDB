@@ -6,7 +6,7 @@ const { response } = require("../utils");
 module.exports = async (req, res) => {
   const newCharacter = req.body;
   const character = await axios.post(
-    "http://localhost:8004/Character",
+    "http://character:8004/Character",
     newCharacter
   );
   response(res, 201, character.data);
