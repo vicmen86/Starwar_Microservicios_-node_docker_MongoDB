@@ -3,6 +3,9 @@
 const {catchedAsync}=require("../utils")
 
 module.exports = {
-  getFilms : catchedAsync((require("./getFilms"))),// ideamos una especie de midelware manejador de errores
+  getFilms : catchedAsync((require("./getFilms"))),
+  // ideamos una especie de midelware manejador de errores
+  getFilmsId : catchedAsync((require("./getFilmsId"))),
   postFilms : catchedAsync((require("./postFilms")))
+
 }

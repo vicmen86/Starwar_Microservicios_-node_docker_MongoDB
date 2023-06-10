@@ -4,6 +4,7 @@ const controllers = require("../controllers")
 const middlewares = require("../middlewares")
 
   router.get('/', controllers.getFilms);
+  router.get('/:id', controllers.getFilmsId);
   router.post('/',middlewares.filmsValidation, controllers.postFilms);
   
   

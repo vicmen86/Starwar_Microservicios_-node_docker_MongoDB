@@ -3,6 +3,8 @@
 const {catchedAsync}=require("../utils")
 
 module.exports = {
-  getPlanets : catchedAsync((require("./getPlanets"))),// ideamos una especie de midelware manejador de errores
+  getPlanets : catchedAsync((require("./getPlanets"))),
+  // ideamos una especie de midelware manejador de errores
+  getPlanetId : catchedAsync((require("./getPlanetId"))),
   postPlanets : catchedAsync((require("./postPlanets")))
 }

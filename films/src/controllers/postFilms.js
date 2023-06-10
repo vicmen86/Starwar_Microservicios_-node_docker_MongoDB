@@ -1,7 +1,12 @@
-// Express tiene un manejador de rrorres para funciones sincronas por defecto
-const Films = require("../data")
-const {response} = require("../utils")
+const axios = require("axios");
 
-module.exports =async (req, res) => {
-  const newFilms = await Films.create()
-response(res, 201, newFilms)}
+const { response } = require("../utils");
+
+module.exports = async (req, res) => {
+  const newFilm = req.body;
+  const film = await axios.post(
+    "http://localhost:8004/Film",
+    newFilm
+  );
+  response(res, 201, film.data);
+};
